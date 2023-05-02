@@ -28,16 +28,16 @@ form.addEventListener("submit", (e) => {
     select.classList.remove("error");
   }
   const allInputsValue = [...inputs].every((input) => input.value);
-  if (selectValue && allInputsValue) {
+  if (selectValue !== "null" && allInputsValue) {
     toast.classList.add("open");
     setTimeout(() => {
       toast.classList.remove("open");
     }, 2000);
+    inputs.forEach((input) => {
+      input.value = "";
+    });
+    select.value = "null";
   }
-  inputs.forEach((input) => {
-    input.value = "";
-  });
-  select.value = "null";
 });
 
 inputs.forEach((input) => {
