@@ -27,19 +27,16 @@ form.addEventListener("submit", (e) => {
   } else {
     select.classList.remove("error");
   }
-  if (
-    selectValue !== "null" &&
-    inputs[0].value !== "" &&
-    inputs[1].value !== "" &&
-    inputs[2].value !== "" &&
-    inputs[3].value !== "" &&
-    inputs[4].value !== ""
-  ) {
+  if (selectValue !== "null" && inputs[0].value !== "" && inputs[1].value !== "" && inputs[2].value !== "" && inputs[3].value !== "") {
     toast.classList.add("open");
     setTimeout(() => {
       toast.classList.remove("open");
     }, 2000);
   }
+  // inputs.forEach((input) => {
+  //   input.value = "";
+  // });
+  // select.value = "null";
 });
 
 inputs.forEach((input) => {

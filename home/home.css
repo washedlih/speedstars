@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "sf-pro";
-  src: url(fonts/SF-Pro-Display-Regular.otf);
+  src: url(../fonts/SF-Pro-Display-Regular.otf);
 }
 
 * {
