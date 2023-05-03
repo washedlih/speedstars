@@ -19,6 +19,10 @@
   font-family: Inter;
 }
 
+#main-container {
+  /* min-height: 100svh; */
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -171,21 +175,33 @@ header {
   }
 }
 
-#form {
-  margin: 64px 0 60px 0;
-  padding: 0 2vh;
-}
-
 form {
   display: flex;
   flex-direction: column;
-  align-items: start;
-  margin: 0 auto;
+  margin: 64px auto 60px auto;
   font-size: 22px;
   color: var(--dark-neutral);
   text-align: center;
   padding: 0 2vh;
-  max-width: 400px;
+  width: 100%;
+  max-width: 900px;
+}
+
+#form-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 0 auto;
+  font-size: 22px;
+  color: var(--dark-neutral);
+  text-align: center;
+  width: 100%;
+  max-width: 900px;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
 }
 
 label {
@@ -235,6 +251,15 @@ select.error {
   border: 1px solid red;
 }
 
+#btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 900px;
+  margin-top: 16px;
+}
+
 .btn {
   font-size: 1rem;
   letter-spacing: -0.04em;
@@ -248,8 +273,7 @@ select.error {
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 400px;
-  margin-top: 16px;
+  max-width: 150px;
 }
 
 .btn:hover {
@@ -382,6 +406,12 @@ footer span {
 }
 
 @media (max-width: 768px) {
+  #form-container {
+    grid-template-columns: 1fr;
+    width: 100%;
+    max-width: 400px;
+    padding: 0 2vh;
+  }
   h1 {
     letter-spacing: -0.04em;
   }
@@ -390,10 +420,15 @@ footer span {
   }
   .footer-container {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
   footer p {
     margin-top: 8px;
+  }
+}
+
+@media (min-width: 768px) {
+  footer {
+    position: absolute;
+    bottom: 0;
   }
 }
