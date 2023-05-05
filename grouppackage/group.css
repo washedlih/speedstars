@@ -264,9 +264,17 @@ header p {
 
 .car-name {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
   color: black;
+}
+
+
+h2{
+  text-align: center;
+  color:black;
+  font-size: 32px;
 }
 
 swiper-container {
