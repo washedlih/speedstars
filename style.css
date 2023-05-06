@@ -215,8 +215,9 @@ header p {
 
 #hero-img {
   border-radius: 12px;
-  max-width: 100%;
-  height: auto;
+  max-width: 1170px;
+  max-height: 780px;
+  width: 100%;
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
 }
@@ -266,7 +267,6 @@ header p {
 #map {
   width: 500px;
   height: 400px;
-  max-width: 100%;
 }
 
 iframe {
@@ -445,15 +445,14 @@ footer span {
     margin: 0 0 2em 0;
     text-align: center;
   }
-  #fleet-section img,
-  #map {
+  #fleet-section img {
     max-width: 100%;
     height: auto;
   }
   iframe,
   #map {
-    max-width: 300px;
-    max-height: 200px;
+    max-width: 600px;
+    width: 100%;
   }
   #cta-section {
     margin: 150px 0 100px 0;
