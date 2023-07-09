@@ -1,9 +1,3 @@
-document.querySelector('nav img').addEventListener('load', () => {
-  document.querySelector('header').style.opacity = 1;
-  const headerChildren = document.querySelector('header').querySelectorAll('*');
-  headerChildren.forEach((child) => child.classList.add('hidden'));
-});
-
 const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 const nav = document.querySelector("nav");

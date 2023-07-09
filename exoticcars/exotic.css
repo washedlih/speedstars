@@ -147,7 +147,6 @@ li {
 h1 {
   font-family: sf-pro;
   color: black;
-  opacity: 0;
   animation: fadeindown 1.2s ease forwards;
 }
 

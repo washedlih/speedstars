@@ -1,8 +1,16 @@
-document.querySelector('nav img').addEventListener('load', () => {
-  document.querySelector('header').style.opacity = 1;
+function showHeader() {
   const headerChildren = document.querySelector('header').querySelectorAll('*');
   headerChildren.forEach((child) => child.classList.add('hidden'));
-});
+}
+
+const img = document.querySelector('nav img');
+if (img.complete) {
+  showHeader();
+} else {
+  img.addEventListener('load', () => {
+    showHeader();
+  });
+}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
