@@ -1,8 +1,8 @@
-window.onload = function () {
-  // add hidden class to all elements inside the header element
+document.querySelector('nav img').addEventListener('load', () => {
+  document.querySelector('header').style.opacity = 1;
   const headerChildren = document.querySelector('header').querySelectorAll('*');
   headerChildren.forEach((child) => child.classList.add('hidden'));
-};
+});
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
